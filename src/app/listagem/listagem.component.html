@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center">
+  <div class="card">
+    <div class="card-header">
+      Minhas viagens
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Data de chegada</th>
+            <th scope="col">Data de saída</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of viagens">
+            <td>{{item.destino}}</td>
+            <td>{{item.tipo}}</td>
+            <td>{{item.dataChegada | date : 'dd/MM/yyyy'}}</td>
+            <td>{{item.dataSaida | date : 'dd/MM/yyyy'}}</td>
+            <td><a href="/detalhar" class="button btn btn-secondary">Detalhar</a></td>
+            <td><a href="/excluir" class="button btn btn-warning">Excluir</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
