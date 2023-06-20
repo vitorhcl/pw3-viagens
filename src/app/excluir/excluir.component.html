@@ -1,1 +1,31 @@
-<p>excluir works!</p>
+<div class="d-flex justify-content-center">
+  <div class="card">
+    <div class="card-header">
+      Excluir viagem
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Destino</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Data de chegada</th>
+            <th scope="col">Data de saída</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{item.destino}}</td>
+            <td>{{item.tipo}}</td>
+            <td>{{item.dataChegada | date : 'dd/MM/yyyy'}}</td>
+            <td>{{item.dataSaida | date : 'dd/MM/yyyy'}}</td>
+            <td><a [routerLink]="['/']" class="button btn btn-secondary">Voltar</a></td>
+            <td><button (click)="removerViagem()" class="button btn btn-danger">Excluir</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

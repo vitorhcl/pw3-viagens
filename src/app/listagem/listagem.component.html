@@ -16,13 +16,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of viagens">
+          <tr *ngFor="let item of getViagens">
             <td>{{item.destino}}</td>
             <td>{{item.tipo}}</td>
             <td>{{item.dataChegada | date : 'dd/MM/yyyy'}}</td>
             <td>{{item.dataSaida | date : 'dd/MM/yyyy'}}</td>
-            <td><a href="/detalhar" class="button btn btn-secondary">Detalhar</a></td>
-            <td><a href="/excluir" class="button btn btn-warning">Excluir</a></td>
+            <td><button [routerLink]="['/detalhar']" class="button btn btn-secondary">Detalhar</button></td>
+            <td><button [routerLink]="['/excluir']" class="button btn btn-warning">Excluir</button></td>
           </tr>
         </tbody>
       </table>

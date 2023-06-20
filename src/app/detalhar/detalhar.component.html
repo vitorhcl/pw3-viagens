@@ -1,1 +1,36 @@
-<p>detalhar works!</p>
+<div class="d-flex justify-content-center">
+  <div class="card">
+    <div class="card-header">
+      Detalhes da viagem
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Destino</label>
+          <input type="text" class="form-control" id="formDestino" [value]="item.destino">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Tipo</label>
+          <input type="text" class="form-control" id="formTipo" [value]="item.tipo">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Data de chegada</label>
+          <input type="text" class="form-control" id="formDataChegada" [value]="item.dataChegada | date : 'dd/MM/yyyy'">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Data de saída</label>
+          <input type="text" class="form-control" id="formDataSaida" [value]="item.dataSaida | date : 'dd/MM/yyyy'">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Valor</label>
+          <input type="text" class="form-control" id="formValor" [value]="item.valor">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Qtde. pessoas</label>
+          <input type="text" class="form-control" id="formQtdPessoas" [value]="item.qtdPessoas">
+        </div>
+      </form>
+      <button [routerLink]="['/']" class="button btn btn-primary">Voltar</button>
+    </div>
+  </div>
+</div>

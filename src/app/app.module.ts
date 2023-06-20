@@ -8,11 +8,14 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExcluirComponent } from './excluir/excluir.component';
 import { DetalharComponent } from './detalhar/detalhar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    ReactiveFormsModule,
     ListagemComponent,
     CadastroComponent,
     ExcluirComponent,
@@ -20,7 +23,8 @@ import { DetalharComponent } from './detalhar/detalhar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

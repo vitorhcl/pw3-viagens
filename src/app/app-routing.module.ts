@@ -8,8 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:'', component:ListagemComponent},
   {path:'cadastro', component:CadastroComponent},
-  {path:'excluir', component:ExcluirComponent},
-  {path:'detalhar', component:DetalharComponent},
+  {path:'excluir/:id', component:ExcluirComponent},
+  {path:'detalhar/:id', component:DetalharComponent},
 ];
 
 @NgModule({
