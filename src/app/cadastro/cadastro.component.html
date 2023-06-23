@@ -4,7 +4,7 @@
       Cadastro de viagens
     </div>
     <div class="card-body register-form">
-      <form [formGroup]="cadastroForm">
+      <form [formGroup]="cadastroForm" (ngSubmit)="cadastrarViagem()">
         <div class="form-group">
           <label for="exampleFormControlInput1">Destino</label>
           <input type="text" class="form-control" formControlName="destino">
@@ -15,11 +15,11 @@
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Data de chegada</label>
-          <input type="text" class="form-control" formControlName="dataChegada">
+          <input type="date" class="form-control" formControlName="dataChegada">
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Data de saída</label>
-          <input type="text" class="form-control" formControlName="dataSaida">
+          <input type="date" class="form-control" formControlName="dataSaida">
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Valor</label>
@@ -31,7 +31,7 @@
         </div>
       </form>
       <button [routerLink]="['/']" class="button btn btn-primary mr-1">Voltar</button>
-      <button type="submit" class="btn btn-primary" [disabled]="cadastroForm.invalid">Enviar</button>
+      <button (click)="cadastrarViagem()" type="submit" class="btn btn-primary" [disabled]="cadastroForm.invalid">Enviar</button>
     </div>
   </div>
 </div>
